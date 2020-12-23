@@ -1,4 +1,4 @@
-# Code for Day 20 Project
+# Code for Day 21 Project
 
 from turtle import Screen
 from snake import Snake
@@ -40,7 +40,7 @@ while game:
         snake.extend()
         scoreboard.increase_score()
 
-    if abs(snake.head.xcor()) > 290 or abs(snake.head.ycor()) > 290:
+    if abs(snake.head.xcor()) > 295 or abs(snake.head.ycor()) > 295:
         game = False
         scoreboard.game_over()
 
