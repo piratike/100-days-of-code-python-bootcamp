@@ -14,7 +14,7 @@ class Scoreboard(Turtle):
         super().__init__()
         self.score = 0
 
-        with open('Day 24 - Intermediate - Files, Directories and Paths/data.txt', 'r') as score:
+        with open('Day 24 - Intermediate - Files, Directories and Paths/Snake Game/data.txt', 'r') as score:
             self.highscore = int(score.read())
 
         self.penup()
