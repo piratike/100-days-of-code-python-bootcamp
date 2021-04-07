@@ -40,7 +40,8 @@ class NotificationManager:
 
         for user in users:
 
-            message = 'Subject:Cheap flight\n\nLow price alert! Only {}€ to fly from {}-{} to {}-{}, from {} to {}.'.format(
+            message = 'Subject:Cheap flight\n\nLow price alert {}! Only {}€ to fly from {}-{} to {}-{}, from {} to {}.'.format(
+                        user['firstName'],
                         flight.price,
                         flight.origin_city,
                         flight.origin_airport,
