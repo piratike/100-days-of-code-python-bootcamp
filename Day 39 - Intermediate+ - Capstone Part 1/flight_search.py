@@ -1,6 +1,7 @@
 # Class for Day 39 Capstone Project
 
 import requests
+from flight_data import FlightData
 
 class FlightSearch:
 
@@ -46,6 +47,22 @@ class FlightSearch:
         }
 
         response = requests.get(url=self.endpoint_search, params=body, headers=headers)
-        iata_code = response.json()
 
-        return iata_code
+        try:
+
+            data = response.json()['data'][0]
+            flight_data = FlightData(
+                price=data["price"],
+                origin_city=data["route"][0]["cityFrom"],
+                origin_airport=data["route"][0]["flyFrom"],
+                destination_city=data["route"][0]["cityTo"],
+                destination_airport=data["route"][0]["flyTo"],
+                out_date=data["route"][0]["local_departure"].split("T")[0],
+                return_date=data["route"][1]["local_departure"].split("T")[0]
+            )
+
+            return flight_data
+
+        except IndexError:
+
+            return None
