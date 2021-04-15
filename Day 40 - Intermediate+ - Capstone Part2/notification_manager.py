@@ -35,8 +35,8 @@ class NotificationManager:
 
     def send_emails(self, flight, users):
 
-        my_email = 'tutotronik@gmail.com'
-        my_password = 'Kevin12011996'
+        my_email = 'email@gmail.com'
+        my_password = 'password'
 
         for user in users:
 
