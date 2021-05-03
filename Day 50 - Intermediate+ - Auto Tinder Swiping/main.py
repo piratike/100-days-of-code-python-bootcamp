@@ -22,10 +22,25 @@ time.sleep(1)
 driver.find_element_by_xpath('//*[@id="u-1992891882"]/div/div/div[1]/div/div[3]/span/div[3]/button').click()
 
 time.sleep(5)
-login_window = driver.window_handles[1]
-driver.switch_to.window(login_window)
+driver.switch_to.window(driver.window_handles[1])
 driver.find_element_by_id('email').send_keys(FACEBOOK_EMAIL)
 driver.find_element_by_id('pass').send_keys(FACEBOOK_PASSWORD)
 driver.find_element_by_xpath('//*[@id="loginbutton"]').click()
 
 time.sleep(5)
+driver.switch_to.window(driver.window_handles[0])
+driver.find_element_by_xpath('//*[@id="u-1992891882"]/div/div/div/div/div[3]/button[1]').click()
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="u-1992891882"]/div/div/div/div/div[3]/button[1]').click()
+
+time.sleep(5)
+try:
+
+    while True:
+
+        driver.find_element_by_xpath('//*[@id="u-264510806"]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div[2]/div[2]/button').click()
+        time.sleep(1)
+
+except KeyboardInterrupt:
+
+    driver.quit()
