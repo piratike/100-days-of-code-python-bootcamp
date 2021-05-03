@@ -7,7 +7,7 @@ import time
 CHROME_DRIVER_PATH = './Day 49 - Intermediate+ - Automating Job Applications/chromedriver/chromedriver.exe'
 URL = 'https://www.linkedin.com/jobs/search/?f_AL=true&f_WRA=true&geoId=105646813&keywords=python&location=Espa%C3%B1a&sortBy=R'
 LINKEDIN_KEY = 'kevinmachuca96@hotmail.com'
-LINKEDIN_PASSWORD = '43836046.12011996K'
+LINKEDIN_PASSWORD = '**************'
 
 driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
 driver.get(URL)
