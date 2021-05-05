@@ -7,11 +7,9 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
 
-CHROME_DRIVER_PATH = './Day 50 - Intermediate+ - Auto Tinder Swiping/chromedriver/chromedriver.exe'
-
 class InternetSpeedTwitterBot:
 
-    def __init__(self, twitter_url, speed_url, user, password, promise_up=0.01, promise_down=0.15):
+    def __init__(self, twitter_url, speed_url, user, password, promise_up=0.01, promise_down=0.15, chrome_path=''):
 
         self.twitter = twitter_url
         self.speedweb = speed_url
@@ -21,8 +19,9 @@ class InternetSpeedTwitterBot:
         self.promise_down = promise_down
         self.up_speed = 0
         self.down_speed = 0
+        self.chrome_path = chrome_path
 
-        self.driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
+        self.driver = webdriver.Chrome(executable_path=self.chrome_path)
 
     def get_internet_speed(self):
 
