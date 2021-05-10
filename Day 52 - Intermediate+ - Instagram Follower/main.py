@@ -2,7 +2,7 @@
 
 from InstagramBot import InstaFollower
 
-CHROME_DRIVER_PATH = './Day 50 - Intermediate+ - Auto Tinder Swiping/chromedriver/chromedriver.exe'
+CHROME_DRIVER_PATH = './Day 52 - Intermediate+ - Auto Tinder Swiping/chromedriver/chromedriver.exe'
 SIMILAR_ACCOUNT = 'tecno.tendencias'
 USERNAME = 'kevinmachuca96@hotmail.com'
 PASSWORD = '43836046Kevin12011996'
