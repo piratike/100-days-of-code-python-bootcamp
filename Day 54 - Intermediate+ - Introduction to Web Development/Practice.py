@@ -16,7 +16,7 @@ def speed_calc_decorator(function):
 def fast_function():
     for i in range(1000000):
         i * i
-        
+
 @speed_calc_decorator
 def slow_function():
     for i in range(100000000):
