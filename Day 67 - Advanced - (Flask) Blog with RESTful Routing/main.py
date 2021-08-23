@@ -97,17 +97,26 @@ def edit_post(index):
         body=post.body
     )
     if post_form.validate_on_submit():
-        post.title = post_form.title.data,
-        post.subtitle = post_form.subtitle.data,
-        post.body = post_form.body.data,
-        post.img_url = post_form.img_url.data,
-        post.author = post_form.author.data,
+        post.title = str(post_form.title.data)
+        post.subtitle = post_form.subtitle.data
+        post.body = post_form.body.data
+        post.img_url = post_form.img_url.data
+        post.author = post_form.author.data
 
         db.session.commit()
 
-        return redirect(url_for('show_post', post_id=post.id))
+        return redirect(url_for('show_post', index=post.id))
 
     return render_template('make-post.html', form=post_form, is_edit=True)
+
+
+@app.route('/delete/<int:index>')
+def delete_post(index):
+    post_to_remove = BlogPost.query.get(index)
+    db.session.delete(post_to_remove)
+    db.session.commit()
+
+    return redirect(url_for('get_all_posts'))
 
 
 if __name__ == '__main__':
