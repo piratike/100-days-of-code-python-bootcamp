@@ -1,3 +1,5 @@
+# Code for Day 71
+
 import pandas as pd
 
 df = pd.read_csv('salaries_by_college_major.csv')
