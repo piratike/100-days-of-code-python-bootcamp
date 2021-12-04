@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "b85d7772-a182-4a86-a07b-a501e51fa946",
+		"name": "Python Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Day 66",
+			"item": [
+				{
+					"name": "Get All Cafes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Random Cafe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/random",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"random"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Cafes By Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/search?loc=Tenerife",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "loc",
+									"value": "Tenerife"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a New Cafe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "map_url",
+									"value": "https://google.es",
+									"type": "text"
+								},
+								{
+									"key": "img_url",
+									"value": "https://google.es",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Tenerife",
+									"type": "text"
+								},
+								{
+									"key": "seats",
+									"value": "+50",
+									"type": "text"
+								},
+								{
+									"key": "has_toilet",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "has_wifi",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "has_sockets",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "can_take_calls",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "coffee_price",
+									"value": "1.50€",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Cafe Coffee price",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/update-price/22?price=2€",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"update-price",
+								"22"
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "2€"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Cafe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/report-closed/22?api-key=Secreto",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"report-closed",
+								"22"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "Secreto"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Day 67",
+			"item": [
+				{
+					"name": "Post a New Blog Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Blog Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
